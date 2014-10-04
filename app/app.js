@@ -12,15 +12,22 @@
 		});
 	}]);
 
-	app.controller('TabController', function() {
-		this.tab = 1;
+	app.directive('productTabs', function(){
+		return {
+			restrict: 'A',
+			templateUrl: 'partials/product-tabs.html',
+			controller: function() {
+				this.tab = 1;
 
-		this.isSet = function(checkTab) {
-			return this.tab === checkTab;
-		};
+				this.isSet = function(checkTab) {
+					return this.tab === checkTab;
+				};
 
-		this.setTab = function(setTab) {
-			this.tab = setTab;
+				this.setTab = function(setTab) {
+					this.tab = setTab;
+				};
+			},
+			controllerAs: 'tab'
 		};
 	});
 
