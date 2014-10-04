@@ -3,5 +3,7 @@
   "version": "0.0.1",
   "description": "A store with Angular",
   "dependencies": {
+    "bootstrap": "~3.2.0",
+    "angular": "~1.2.26"
   }
 }
