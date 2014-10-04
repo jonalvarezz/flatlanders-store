@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="gemStore" class="no-js" lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Angular Application</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/min/main.min.css" />
+</head>
+
+<body ng-controller="StoreController as store">
+  <!--[if lt IE 8]>
+  	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+	<!--  Store Header  -->
+	<header>
+		<h1 class="text-center">Flatlander Crafted Gems</h1>
+		<h2 class="text-center">– an Angular store –</h2>
+	</header>
+
+	<!--  Products Container  -->
+	<div class="list-group">
+		<!--  Product Container  -->
+		<div class="list-group-item" ng-repeat="product in store.products">
+			<h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
+
+			<!-- Image Gallery  -->
+			<div product-gallery ng-show="product.images.length"></div>
+
+			<!-- Product Tabs  -->
+			<section class="panels" product-tabs></section>
+
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="lib/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+
+	</body>
+</html>
