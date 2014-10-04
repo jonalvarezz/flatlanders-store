@@ -1,0 +1,17 @@
+{
+  "name": "flatlanders-store",
+  "version": "0.0.1",
+  "description": "A store with Angular",
+  "keywords": [
+    "angular"
+  ],
+  "author": {
+    "name": "Jonathan Alvarez Gonzalez",
+    "email": "j@jonalvarezz.com",
+    "url": "http://jonalvarezz.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.8"
+  }
+}
