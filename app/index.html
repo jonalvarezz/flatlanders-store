@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/min/main.min.css" />
 </head>
 
 <body ng-controller="StoreController as store">
@@ -33,14 +34,14 @@
 					<img ng-src="{{product.images[gallery.current]}}" />
 				</div>
 				<ul class="img-thumbnails clearfix">
-					<li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+					<li class="small-image thumbnail" ng-repeat="image in product.images">
 						<img ng-src="{{image}}" />
 					</li>
 				</ul>
 			</div>
 
 			<!-- Product Tabs  -->
-			<section ng-controller="TabController as tab">
+			<section ng-controller="TabController as tab" class="panels">
 				<ul class="nav nav-pills">
 					<li ng-class="{ active:tab.isSet(1) }">
 						<a href ng-click="tab.setTab(1)">Description</a>
